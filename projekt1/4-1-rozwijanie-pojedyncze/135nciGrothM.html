@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Kurs od podstaw. Część pierwsza: Wprowadzenie. Przykład #4.1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style type="text/css">
+    #tresc {
+        width: 300px;
+        border: 1px solid green;
+        padding: 10px;
+        background: #e8fff1;        
+    }
+    #minitresc {
+        display: none;
+        padding: 5px;
+		background: -webkit-linear-gradient(#FFF, #000); /* dodałem gradient oraz zmieniłem kolor czcionki  */
+		background: -o-linear-gradient(#FFF, #000); 
+		background: -moz-linear-gradient(#FFF, #000);
+		background: linear-gradient(#FFF, #000);
+		color: red;
+		}
+    #ikona {
+        width: 15px;
+        font-family: "Courier New", monospace;
+        text-decoration: none;
+    }
+    </style>
+    
+<script type="text/javascript">
+
+var expanded = false;
+
+function expandCollapse()
+{
+    if (expanded) {
+        expanded = false;
+        document.getElementById('minitresc').style.display = 'none';        
+        document.getElementById('ikona').innerHTML = '+';
+    } else {
+        expanded = true;
+        document.getElementById('minitresc').style.display = 'block';                
+        document.getElementById('minitresc').innerHTML = 'tu znajduje się tajna zaszyfrowana treść';
+        document.getElementById('ikona').innerHTML = '-';        
+    }
+}
+
+</script>    
+    
+    
+  </head>
+<body>
+
+<div id="tresc">
+<a id="ikona" href="#" onclick="expandCollapse();">+</a>
+tutaj znajdują się wiadomości dotyczące autora modyfikacji tzn: Marcin Groth 135 nci
+<div id="minitresc"></div>
+</div>
+
+</body>
+</html>
